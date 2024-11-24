@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Object-oriented JavaScript example</title>
+  </head>
+
+  <body>
+    <p>This example requires you to enter commands in your browser's JavaScript console (see <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">What are browser developer tools</a> for more information).</p>
+    
+    <script>
+      const person = {
+        name: {
+            first: "Bob",
+            last: "Smith",
+        },
+        age: 32,
+        bio() {
+            console.log(`${this.name.first} ${this.name.last} is ${this.age} years old.`);
+        },
+        introduceSelf() {
+            console.log(`Hi! I'm ${this.name.first}.`);
+        },
+        };
+
+        const myDataName = "height";
+        const myDataValue = "1.75m";
+        person[myDataName] = myDataValue;
+
+        function logProperty(propertyName) {
+        console.log(person[propertyName]);
+        };
+
+        person.age = 45;
+        person["name"]["last"] = "Cratchit";
+
+        person["eyes"] = "hazel";
+        person.farewell = function () {
+          console.log("Bye everybody!");
+        };
+
+
+        function Person(name) {
+          this.name = name;
+          this.introduceSelf = function () {
+            console.log(`Hi! I'm ${this.name}.`);
+          };
+        }
+
+       const salva = new Person("Salva");
+       const frankie = new Person("Frankie");
+
+       const myNotification = new Notification("Hello!");
+       
+       
+       
+       
+
+      //  function getEvens(num) {
+      //   return num %2 === 0;
+      //  }
+
+      //  const evenNums = array.filter(getEvens);
+       
+      //  function getTripleEvens (num) {
+      //   return num * 3
+      //  }
+
+      //  const tripleEvens = evenNums.map(getTripleEvens);
+
+      //  function getSumOfTripleEvens (sumOfTripledEvens, currentValue) {
+      //   return sumOfTripledEvens += currentValue;
+      //  }
+
+
+      //  const results = tripleEvens.reduce(getSumOfTripleEvens);
+      //  console.log(results);
+
+      let array = [1, 2, 3, 4, 5, 6, 7, 8]
+
+      function sumOfTripleEvens(arr) {
+        return array
+        .filter((num) => num %2 === 0)
+        .map((num) => num * 3)
+        .reduce((total, currentValue) => total + currentValue)
+      }
+
+    sumOfTripleEvens(array);
+   
+
+    </script>
+  </body>
+
+</html>
